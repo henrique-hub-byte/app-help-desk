@@ -1,15 +1,19 @@
-<?php 
-    echo '<pre>';
-    print_r($_POST) ;
-    echo '</pre>';
-
-    fopen('arquivo.hd', 'a');
+<?php
+    session_start();
 
     $titulo = str_replace('#', '-', $_POST['titulo']);
     $categoria = str_replace('#', '-', $_POST['categoria']);
     $descricao = str_replace('#', '-', $_POST['descricao']);
+    //implode ('#')
+    $texto = $_SESSION['id']. '#' . $titulo. '#' .$categoria.'#'.$descricao . PHP_EOL;
 
-    $texto = $_POST['titulo']. '#' .$_POST['categoria'].'#'.$_POST['descricao'];
+    //abrindo o arquivo
+    $arquivo = fopen('arquivo.txt', 'a');
+    //escrevendo o texo
+    fwrite($arquivo ,$texto);
+    //fechando o arquivo
+    fclose($arquivo);
 
-    echo $texto;
-?>
+    //echo $texto;
+
+    header('Location: abrir_chamado.php');

@@ -1,7 +1,8 @@
 <?php
 
-require_once 'validador_acesso.php'
+require_once 'validador_acesso.php';
 
+print_r($_SESSION);
 ?>
 
 <html>
@@ -28,7 +29,6 @@ require_once 'validador_acesso.php'
       <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
       App Help Desk
     </a>
-
     <ul class="navbar-nav">
       <li class="nav-item">
         <a href="logoff.php" class="nav-link">SAIR</a>
@@ -38,7 +38,6 @@ require_once 'validador_acesso.php'
 
   <div class="container">
     <div class="row">
-
       <div class="card-home">
         <div class="card">
           <div class="card-header">
@@ -50,7 +49,6 @@ require_once 'validador_acesso.php'
                 <a href="abrir_chamado.php">
                   <img src="formulario_abrir_chamado.png" width="70" height="70">
                 </a>
-
               </div>
               <div class="col-6 d-flex justify-content-center">
                 <a href="consultar_chamado.php">

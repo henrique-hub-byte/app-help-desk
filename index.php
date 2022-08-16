@@ -1,8 +1,6 @@
 <?php
-  session_start();
-
+session_start();
 /*   echo $_SESSION['x']; */
-
 ?>
 
 
@@ -11,9 +9,7 @@
 <head>
   <meta charset="utf-8" />
   <title>App Help Desk</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <style>
     .card-login {
       padding: 30px 0 0 0;
@@ -24,7 +20,6 @@
 </head>
 
 <body>
-
   <nav class="navbar navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
       <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -34,7 +29,6 @@
 
   <div class="container">
     <div class="row">
-
       <div class="card-login">
         <div class="card">
           <div class="card-header">
@@ -48,23 +42,22 @@
               <div class="form-group">
                 <input name="senha" type="password" class="form-control" placeholder="Senha">
               </div>
-
               <?php
-              if (isset($_GET['login']) && $_GET['login'] == 'erro' ) {?>
+
+              if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
                 <div class='text-danger'>
-                Usuário ou senha invalido(s)
+                  Usuário ou senha invalido(s)
                 </div>
               <?php } ?>
 
               <?php
-              if (isset($_GET['login']) && $_GET['login'] == 'erro2' ) {?>
+
+              if (isset($_GET['login']) && $_GET['login'] == 'erro2') { ;?>
+
                 <div class='text-danger'>
-                Faça login antes de acessar as paginas protegidas
+                  Faça login antes de acessar as paginas protegidas
                 </div>
               <?php } ?>
-
-
-
               <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
             </form>
           </div>

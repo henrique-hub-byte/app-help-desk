@@ -1,5 +1,5 @@
 <?php
-    session_start();
+session_start();
 /*
     echo '<pre>';
    print_r($_SESSION);
@@ -18,5 +18,5 @@
    print_r($_SESSION);
    echo '</pre>'; */
 
-   session_destroy();
-   header('Location: index.php');
+session_destroy();
+header('Location: index.php');
