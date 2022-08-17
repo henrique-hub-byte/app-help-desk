@@ -1,5 +1,0 @@
-note não liga#Hardware#alo
-teste#Hardware#alooo
-caractere não substitui#Software#str_replace não ta funcionando
-1#id do usuario#Software#o id do usuario não aparece no chamado 
-4#problema#Impressora#eeeee
