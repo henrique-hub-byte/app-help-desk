@@ -3,7 +3,6 @@ require_once 'validador_acesso.php';
 ?>
 <?php
 
-
 $chamados = array();
 
 $arquivo = fopen('arquivo.txt', 'r');
@@ -15,15 +14,15 @@ while (!feof($arquivo)) {
 
   $registro_detalhes = explode('#', $registro);
 
-  if($_SESSION['perfil_id'] == 2){
+  if ($_SESSION['perfil_id'] == 2) {
     //só vamos exibir o chamado se criado pelo usuario
-    if($_SESSION['id'] != $registro_detalhes[0]){
+    if ($_SESSION['id'] != $registro_detalhes[0]) {
       continue;
-    }else {
+    } else {
       $chamados[] = $registro;
     }
-  } else{
-      $chamados[] = $registro;
+  } else {
+    $chamados[] = $registro;
   }
 }
 
@@ -75,7 +74,7 @@ fclose($arquivo);
               <?php $chamado_dados = explode('#', $chamado);
 
 
-              if(count($chamado_dados) < 3){
+              if (count($chamado_dados) < 3) {
                 continue;
               }
 

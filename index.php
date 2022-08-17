@@ -1,6 +1,6 @@
 <?php
 session_start();
-/*   echo $_SESSION['x']; */
+/* echo $_SESSION['']; */
 ?>
 
 
@@ -42,18 +42,15 @@ session_start();
               <div class="form-group">
                 <input name="senha" type="password" class="form-control" placeholder="Senha">
               </div>
-              <?php
 
-              if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+              <!-- condições caso de erro na autenticação -->
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
                 <div class='text-danger'>
                   Usuário ou senha invalido(s)
                 </div>
               <?php } ?>
 
-              <?php
-
-              if (isset($_GET['login']) && $_GET['login'] == 'erro2') { ;?>
-
+              <?php if (isset($_GET['login']) && $_GET['login'] == 'erro2') { ;?>
                 <div class='text-danger'>
                   Faça login antes de acessar as paginas protegidas
                 </div>
